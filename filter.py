@@ -3,6 +3,7 @@ import datetime
 from fnmatch import fnmatch
 import mimetypes
 import re
+import subprocess
 
 
 RE_WORD = re.compile(r'\b[a-zA-Z]+\b')
@@ -11,6 +12,7 @@ keywords = frozenset(['data', 'preview'])
 column_holder = []
 Path_holder = []
 title_list = []
+
 
 def is_empty(fpath):  
     return True if os.path.isfile(fpath) and os.path.getsize(fpath) > 0 else False
@@ -55,10 +57,10 @@ def Get_titles_list(root):
 	
 def Activity_count():
 	for x in column_holder:
-	    print x  + str(title_list.count(x))
+	    print x  +','+ str(title_list.count(x))
     
     
     
 j =Get_titles_list('/home/labadmin/.sugar/default/datastore')
-print j
+
 

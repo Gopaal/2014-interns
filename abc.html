@@ -1,0 +1,20 @@
+<html>
+<head>
+<script>
+window.onload = function(){
+    var iframe = document.createElement('iframe');
+    iframe.id = 'iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+    iframe.src = 'fill.txt';
+    setTimeout(function(){
+        var text = document.getElementById('iframe').contentDocument.body.firstChild.innerHTML;
+
+    }, 1000);
+}
+</script></head>
+<body>
+<iframe id='iframe' src ='fill.txt' onload='readfile()'> </iframe>
+
+</body>
+</html>
