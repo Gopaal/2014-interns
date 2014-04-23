@@ -35,7 +35,7 @@ def Get_titles_list(root):
 		    
 		    
 	WriteFile = open('datastore.txt',"w+")
-	#WriteFile.write("\n")
+	WriteFile.write("\n")
 	#WriteFile.write("{")
  	for count in Path_holder:
 	    #print count
